@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia en HTML</title>
+	</head>
+	<body>
+    <div>
+			<h1>Aprendiendo a utilizar imagenes</h1>
+			<img src="https://static-assets-prod.epicgames.com/fortnite/static/webpack/8f9484f10eb14f85a189fb6117a57026.jpg" alt="Fortnite" width="348" height="195">
+		</div>
+
+		<div>
+			<h1>Aprendiendo a utilizar los videos</h1>
+			<video width="348" height="195" controls autoplay muted loop>
+				<source src="Video.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<div>
+			<h1>Aprendiendo a utilizar los audios</h1>
+			<audio controls autoplay loop>
+				<source src="Sfera Ebbasta  Ricchi X Sempre.mp3" type="audio/mp3">
+			</audio>
+		</div>
+	</body>
+</html>
