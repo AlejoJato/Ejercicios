@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+        *{
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            background-color: #1B1D31;
+        }
+
+        .light-color{
+            width: 450px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #24253C;
+            border-radius: 5px;
+        }
+
+        .title{
+            margin: 5px;
+            color: white;
+            align-self: flex-start;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 28pt;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .names{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        label{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input{
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #E53854;
+            border-radius: 20px;
+            background-color: #24253C;
+            outline: none;
+            width: 90%;
+            color: white;
+            transition: background-color 0.5s;
+        }
+
+        .names input{
+            width: 80%;
+        }
+
+        input::placeholder{
+            color: white;
+        }
+
+        input:hover{
+            background-color: #1B1D31;
+            box-shadow: 0 0 4px #E53854;
+        }
+
+        input:focus{
+            background-color: #1B1D31;
+            box-shadow: 0 0 4px #E53854;
+        }
+
+
+        .terms{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #checkbox{
+            width: 20px;
+            cursor: pointer;
+        }
+
+        label[for="checkbox"] > span {
+            color: white;
+            font-size: 12pt;
+        }
+
+        .privacy, .policy {
+            color: #E53854;
+            background-color: #24253C;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            font-size: 12pt;
+        }
+
+        .privacy:hover, .policy:hover{
+            text-decoration: underline;
+            opacity: 0.9
+            ;
+        }
+
+        .privacy:active, .policy:active {
+            opacity: 0.75;
+        }
+
+        .signup {
+            background-color: #E53854;
+            border: none;
+            border-radius: 30px;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 200;
+        }
+
+        .signup:hover{
+            opacity: 0.8;
+        }
+
+        .signup:active{
+            opacity: 1;
+        }
+
+        .signup > span {
+            color: white;
+            font-size: 30pt;
+            font-weight: 600;
+        }
+
+        .container-separator{
+            width: 100%;
+            display: flex;
+            gap: 15px;
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+
+        .container-separator span {
+            color: white;
+        }
+        .container-separator hr {
+            flex-grow: 1;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+
+        .container-media{
+            display: flex;
+            gap: 10px;
+        }
+        .media-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            padding: 1px 2px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .media-btn:hover{
+            opacity: 0.75;
+        }
+        .media-btn:active{
+            opacity: 1;
+        }
+
+        button picture img{
+            width: 100%;
+            height: 30px;
+        }
+
+        .container-signin{
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .container-signin > span {
+            color: white;
+            font-weight: 100;
+        }
+
+        .signin-btn {
+            background-color: #24253C;
+            border: none;
+            color: #E53854;
+            cursor: pointer;
+            font-size: 10pt;
+        }
+
+        .signin-btn:hover{
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+
+        .signin-btn:active{
+            opacity: 1;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/formulariopiola.css">
+</head>
+<body>
+    <div class="light-color">
+        <h1 class="title">Sign Up</h1>
+        
+        <form class="form">
+            <div class="names">
+                <label for="name">
+                    <input type="text" name="name" id="first-name" placeholder="First Name">
+                </label>
+
+                <label for="last-name">
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                </label>
+            </div>
+            <label for="email">
+                <input type="text" name="email" id="email" placeholder="Email">
+            </label>
+            
+            <label for="password">
+                <input type="password" name="password" id="password" placeholder="Password">
+            </label>
+            
+            <label for="password-2">
+                <input type="password" name="password-2" id="password-2" placeholder="Confirm Password">
+            </label>
+
+            <label for="checkbox" class="terms">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <span>I agree with <button type="button" class="privacy">privacy</button> and <button type="button" class="policy">policy</button></span>
+            </label>
+
+            <button type="submit" class="signup">
+                <span>Sign up</span>
+            </button>
+        </form>
+
+        <div class="container-separator">
+            <hr>
+            <span>Or Sign in with</span>
+            <hr>
+        </div>
+
+        <div class="container-media">
+            <button type="button" class="media-btn">
+                <picture>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Instagram.svg/2048px-Instagram.svg.png" alt="Instagram Logo">
+                </picture>
+            </button>
+            
+            <button type="button" class="media-btn">
+                <picture>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="Twitter Logo">
+                </picture>
+            </button>
+
+            <button type="button" class="media-btn">
+                <picture>
+                    <img src="https://cdn.cdnlogo.com/logos/f/84/facebook.svg" alt="Facebook Logo">
+                </picture>
+            </button>
+
+            <button type="button" class="media-btn">
+                <picture>
+                    <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" alt="Google Logo">
+                </picture>
+            </button>
+        </div>
+
+        <div class="container-signin">
+            <span>Already have an account?</span>
+            <button class="signin-btn">
+                <span>Sign in</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
