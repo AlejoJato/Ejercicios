@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones y transiiones en CSS</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .btn-modern{
+            padding: 10px 20px;
+            font-size: 20pt;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 400;
+            background-color: darksalmon;
+            border: none;
+            border-bottom: 2px solid rgb(162, 77, 77);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-modern:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgb(122, 112, 112);
+            background-color: rgb(162, 77, 77);
+            color: rgb(150, 150, 150);
+            transition: all 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-modern">Boton</button>
+</body>
+</html>
