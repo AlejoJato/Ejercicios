@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño responsive en CSS</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .seccion-1{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .seccion-2{
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        @media (max-width: 640px) {
+            .seccion-1{
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+            }
+            .seccion-2{
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="seccion-1">
+        <div class="elemento-1">Elemento 1</div>
+        <div class="elemento-2">Elemento 2</div>
+        <div class="elemento-3">Elemento 3</div>
+    </section>
+    <section class="seccion-2">
+        <span>Seccion principal</span>
+    </section>
+</body>
+</html>
